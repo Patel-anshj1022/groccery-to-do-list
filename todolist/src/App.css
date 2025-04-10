@@ -1,0 +1,118 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  transition: background 0.3s;
+}
+
+.app {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.input-section button {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+li.bought span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+li span {
+  cursor: pointer;
+}
+
+li button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.dark-mode-toggle {
+  display: block;
+  margin: 10px auto;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
+}
+
+/* Dark Mode */
+.app.dark {
+  background: #222;
+  color: #eee;
+}
+
+.app.dark input,
+.app.dark .input-section button {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+.app.dark ul li {
+  border-color: #444;
+}
+
+.app.dark .dark-mode-toggle {
+  color: #ccc;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
